@@ -42,7 +42,7 @@ function vendor() {
 }
 
 echo "-----> Vendoring binaries"
-vendor "https://s3-eu-west-1.amazonaws.com/skyuk-heroku-cairo-buildpack/$STACK/cairo-1.14.6-1.tar.gz"  "$BUILD_DIR/vendor/cairo"
+vendor "https://allertons-heroku.s3-eu-west-1.amazonaws.com/$STACK/cairo-1.16.0.tar.gz"  "$BUILD_DIR/vendor/cairo"
 vendor "https://s3-eu-west-1.amazonaws.com/skyuk-heroku-cairo-buildpack/$STACK/freetype-2.6.5-1.tar.gz" "$BUILD_DIR/vendor/freetype"
 vendor "https://s3-eu-west-1.amazonaws.com/skyuk-heroku-cairo-buildpack/$STACK/giflib-4.2.3-3.tar.gz"   "$BUILD_DIR/vendor/giflib"
 vendor "https://s3-eu-west-1.amazonaws.com/skyuk-heroku-cairo-buildpack/$STACK/pixman-0.34.0-1.tar.gz"  "$BUILD_DIR/vendor/pixman"
