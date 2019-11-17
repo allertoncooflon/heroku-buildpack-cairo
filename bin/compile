@@ -41,10 +41,6 @@ function vendor() {
   export LD_LIBRARY_PATH="$path/lib:$LD_LIBRARY_PATH"
 }
 
-echo "-----> Installing cairo package"	
-apt update -y	
-apt install -y build-base cairo-dev cairo cairo-tools jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev
-
 echo "-----> Vendoring binaries"
 vendor "https://allertons-heroku.s3-eu-west-1.amazonaws.com/$STACK/cairo-1.16.0.tar.gz"  "$BUILD_DIR/vendor/cairo"
 vendor "https://s3-eu-west-1.amazonaws.com/skyuk-heroku-cairo-buildpack/$STACK/freetype-2.6.5-1.tar.gz" "$BUILD_DIR/vendor/freetype"
