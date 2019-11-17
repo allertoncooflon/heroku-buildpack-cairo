@@ -41,6 +41,7 @@ function vendor() {
   export LD_LIBRARY_PATH="$path/lib:$LD_LIBRARY_PATH"
 }
 echo "-----> Installing cairo package"
+apt update -y
 apt install -y python-cairo
 
 echo "-----> Vendoring binaries"
