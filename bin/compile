@@ -40,6 +40,8 @@ function vendor() {
 
   export LD_LIBRARY_PATH="$path/lib:$LD_LIBRARY_PATH"
 }
+echo "-----> Installing cairo package"
+apt install -y python-cairo
 
 echo "-----> Vendoring binaries"
 vendor "https://allertons-heroku.s3-eu-west-1.amazonaws.com/$STACK/cairo-1.16.0.tar.gz"  "$BUILD_DIR/vendor/cairo"
